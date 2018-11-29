@@ -1,17 +1,19 @@
-name = str(input('Введите имя:  '))
-surname = str(input('Введите фамилию:  '))
+name = input('Введите имя:  ')
+surname = input('Введите фамилию:  ')
 print('приветствую Вас ' + name + ' ' + surname)
 print('------------------------------------------')
 
-born_day = input('Введите день даты рождения:   ')
-born_month = input('Введите месяц даты рождения:    ')
-born_year = input('Введите год даты рождения:   ')
-print('Вы родились  ' + born_day + ' ' + born_month + ' ' + born_year)
-print('------------------------------------------')
+born_day = int(input('Введите день даты рождения:   '))
+born_month = int(input('Введите месяц даты рождения:    '))
+born_year = int(input('Введите год даты рождения:   '))
+m = 30
+years = 2018 - born_year
+months = (12 - born_month) + ( (years - 1) * 12) + 10
+days = ( (  (12 - born_month) * m)  +  (m - born_day) )  + ( (years - 1) * 12 * m) + (m * 10) + 19
 
-days = (15+(5*30)) + ((30*12)*29) + ((10*30)+19)
-months = int(days / 30)
-years = int(months / 12)
+
+print('Вы родились  ' + str(born_day) + ' ' + str(born_month) + ' ' + str(born_year) )
+
 print('Вы прожили  ' + str(days) + ' дней, '  + str(months) + ' месяца, '  +  str(years) + ' лет'  + ' до даты начала курса 19.11.2018' )
 
 
